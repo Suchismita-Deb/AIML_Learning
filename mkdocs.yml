@@ -2,20 +2,8 @@ site_name: AIML_Learning
 
 nav:
   - Home: index.md
-  - "Nav":
-      - Dropdown: yo.md
   - System Design:
       - Fundamentals: SystemDesign/Fundamentals.md
-      - Sample: Sample.md
-      - Pattern: Pattern.md
-      - Key Technologies:
-          - Redis: Redis.md
-          - DynamoDb: DynamoDb.md
-          - Cassandra: Cassandra.md
-  - KafkaFundamentals:
-      - ProducerConsumer: KafkaFundamentals/ProducerConsumer.md
-
-
 
 markdown_extensions:
   - md_in_html
