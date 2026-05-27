@@ -77,6 +77,7 @@ Most common pitfalls.
 - Ask targeted -  
     - Does system need **X**?  
     - What if **Y**?  
+  
 - Get **prioritized core features (Top 3 points)**. Keep it **strategic**, not long list it will create problem.  
 - The target is to make the system to complete the requirements.
 
