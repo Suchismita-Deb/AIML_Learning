@@ -1,2 +1,2 @@
-The page URL - https://suchismita-deb.github.io/blogSystemDesign/
+The page URL - https://suchismita-deb.github.io/AIML_Learning/
 
