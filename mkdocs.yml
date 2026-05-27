@@ -8,7 +8,7 @@ nav:
 markdown_extensions:
   - md_in_html
 theme:
-  name: material
+  name: mkdocs
   palette:
     - scheme: default
       primary: teal
