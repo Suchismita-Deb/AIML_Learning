@@ -43,19 +43,3 @@ The tag in the base doc branch.
 Making the image small - `<img src="/images/SystemDesign/NetworkLayer.png" style="width:60%;">`
 
 https://suchismita-deb.github.io/blogSystemDesign/
-
-Practice UML diagram to get teh class relation ship of the system and no need to write to the code. Design Pattern and UML diagram.
-
-# System Design PDF
-
-<iframe
-class="pdf-viewer"
-src="./pdfs/Graph.pdf">
-</iframe>
-
-
-
-<iframe
-class="pdf-viewer"
-src="./pdfs/SystemDesignTips.pdf">
-</iframe>
