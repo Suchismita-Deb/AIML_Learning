@@ -56,3 +56,8 @@ Table when the first column contains text and act as heading.
     height: 90vh;
     border: none;
 }
+
+:root {
+  --md-primary-fg-color: #d15dde;
+  --md-accent-fg-color: #d15dde;
+}
