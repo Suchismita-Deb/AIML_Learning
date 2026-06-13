@@ -10,3 +10,10 @@
 > 
 System Design Type - **Product design**(Uber)  and **Infrastructure Design** (Rate Limiter).  
 The interviewer is looking to assess some skills and knowledge throughout the interview go through the thought process and give them points to evaluate.
+
+
+
+
+
+
+
