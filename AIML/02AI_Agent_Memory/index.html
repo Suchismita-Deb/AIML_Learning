@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../01HarnessEngineering/">
       
+      
+        <link rel="next" href="../../AI_Interview/InterviewQuestion/">
       
       
         
@@ -21,7 +23,7 @@
     
     
       
-        <title>Fundamentals - AIML_Learning</title>
+        <title>Memory Management - AIML_Learning</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fundamental-of-system-design" class="md-skip">
+        <a href="#ai-agent-memory" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fundamentals
+              Memory Management
             
           </span>
         </div>
@@ -226,11 +228,31 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../Fundamentals/" class="md-tabs__link">
           
   
   
-  System Design
+  AI/ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AI_Interview/InterviewQuestion/" class="md-tabs__link">
+          
+  
+  
+  Interview Questions
 
         </a>
       </li>
@@ -339,7 +361,7 @@
   <span class="md-ellipsis">
     
   
-    System Design
+    AI/ML
   
 
     
@@ -355,11 +377,67 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    System Design
+    AI/ML
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01HarnessEngineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harness Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -384,7 +462,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentals
+    Memory Management
   
 
     
@@ -402,7 +480,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentals
+    Memory Management
   
 
     
@@ -428,10 +506,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#thumb-rule" class="md-nav__link">
+  <a href="#human-memory-analogy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Thumb rule.
+        Human Memory Analogy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coala-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CoALA Framework.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CoALA Framework.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working memory.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedural-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedural Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#episodic-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Episodic Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common failure modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-architecture-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick architecture pattern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-window-management-critical-for-long-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context Window Management (critical for long sessions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-update-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Update Strategies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieval Strategy.
       
     </span>
   </a>
@@ -442,6 +636,95 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interview Questions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interview Questions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI_Interview/InterviewQuestion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -481,10 +764,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#thumb-rule" class="md-nav__link">
+  <a href="#human-memory-analogy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Thumb rule.
+        Human Memory Analogy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coala-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CoALA Framework.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CoALA Framework.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working memory.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedural-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedural Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#episodic-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Episodic Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common failure modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-architecture-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick architecture pattern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-window-management-critical-for-long-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context Window Management (critical for long sessions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-update-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Update Strategies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieval Strategy.
       
     </span>
   </a>
@@ -534,10 +933,10 @@
     
     
       <li class="md-path__item">
-        <a href="./" class="md-path__link">
+        <a href="../Fundamentals/" class="md-path__link">
           
   <span class="md-ellipsis">
-    System Design
+    AI/ML
   </span>
 
         </a>
@@ -556,15 +955,151 @@
 
 
 
-<h1 id="fundamental-of-system-design">Fundamental of System Design.</h1>
-<h2 id="thumb-rule">Thumb rule.</h2>
-<blockquote>
-<p>Learn the most important thing and connect with the real system and problem rather than accumulating academin knowledge.</p>
-<p>Avoid - ❌ Too shallow and ❌ Too deep (over-engineering)</p>
-<p>Get the ambiguously defined high level problem and break it down to small piece of infrastructure and solve it.</p>
-<p>System Design Type - <strong>Product design</strong>(Uber)  and <strong>Infrastructure Design</strong> (Rate Limiter).<br />
-The interviewer is looking to assess some skills and knowledge throughout the interview go through the thought process and give them points to evaluate.</p>
-</blockquote>
+<h1 id="ai-agent-memory">AI Agent Memory</h1>
+<p><strong>Goal</strong> - AI Agent needs memory - reliable behavior across long tasks and repeated sessions without blowing up context cost.</p>
+<h3 id="human-memory-analogy">Human Memory Analogy</h3>
+<ul>
+<li>Human brain has mainly 4 types of memory - <strong><em>Short Term Memory, Factual Knowledge, Learned Skills, Personal Experience</em></strong>.</li>
+</ul>
+<h2 id="coala-framework">CoALA Framework.</h2>
+<ul>
+<li>The framework that AI used to get the memory is called <strong>CoALA</strong> - <strong>Cognitive Architecture for Language Agents</strong> points the 4 types of memory - <strong><em>Working memory, Semantic memory, Procedural memory and Episodic memory</em></strong>.</li>
+</ul>
+<h3 id="working-memory">Working memory.</h3>
+<ul>
+<li>The context window of the LLM. Equivalent to RAM - fast, accessible and volatile.  </li>
+<li>Its limited in size and its removed when the session is over. The max today is 1M token in a context window. </li>
+<li>Main limits - context window size, attention dilution, cost and latency.
+  Core practice - keep only task-relevant context loaded.</li>
+<li>It starts at the beginning of every session.</li>
+</ul>
+<h3 id="semantic-memory">Semantic Memory</h3>
+<ul>
+<li>It is the agents knowledge base and it stores facts and rules and conventions like the vector db. It mentions what the agent should know in general.</li>
+<li>It is simple a md file like the Claude.md</li>
+<li>Typical stores - docs, KB, wiki, vector index, structured metadata.</li>
+<li>Retrieval should be grounded with citations/source pointers where possible.  Risk - stale or conflicting facts if not versioned and refreshed.</li>
+</ul>
+<h3 id="procedural-memory">Procedural Memory</h3>
+<ul>
+<li>It is the agents skill base and it tells the agent how to do things like the codebase. </li>
+<li>It uses a file format called skill.md</li>
+<li>It mentions the skills and how to do the thing. Skills use progressive disclosure so the agent does not load all skills into the context window.  </li>
+<li>It loads the index and then when the task matches any skills then it loads the instructions. l</li>
+<li>Best when instructions are deterministic, scoped, and testable.</li>
+</ul>
+<h3 id="episodic-memory">Episodic Memory</h3>
+<ul>
+<li>It is the agents personal experience and it tells the agent what it has done in the past.</li>
+<li>It uses a file format called experience.md</li>
+<li>Naive solution to store the transcript of all the conversation and use it. It is not a good solution.  </li>
+<li>It does some sort of distillations.</li>
+<li>The agent stores the distilled and compressed experience.</li>
+<li>Good episode schema - context, action taken, outcome, error/root cause, reusable lesson</li>
+</ul>
+<h2 id="common-failure-modes">Common failure modes</h2>
+<ol>
+<li>Memory poisoning: bad data enters long-term store and keeps being reused.</li>
+<li>Stale memory: old facts override current truth.</li>
+<li>Over-retrieval: too much context causes weaker reasoning.</li>
+<li>Under-retrieval: misses critical prior decisions.</li>
+<li>Self-reinforcement loops: agent keeps trusting its own wrong summaries.</li>
+</ol>
+<h2 id="quick-architecture-pattern">Quick architecture pattern</h2>
+<ol>
+<li>User input.</li>
+<li>Retrieve from semantic + procedural + episodic memory.</li>
+<li>Assemble minimal working context.</li>
+<li>Plan/act with tools.</li>
+<li>Evaluate outcome.</li>
+<li>Distill and write back high-value episode.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Category</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pinecone, Weaviate, Qdrant</strong></td>
+<td>Vector DB</td>
+<td>Managed, scalable, hybrid search support</td>
+</tr>
+<tr>
+<td><strong>pgvector</strong></td>
+<td>Postgres extension</td>
+<td>Good for small-medium scale, co-locate with app DB</td>
+</tr>
+<tr>
+<td><strong>Redis + RediSearch</strong></td>
+<td>KV + vector</td>
+<td>Fast, good for session memory</td>
+</tr>
+<tr>
+<td><strong>LangChain Memory</strong></td>
+<td>Abstraction layer</td>
+<td>ConversationBufferMemory, SummaryMemory, VectorStoreMemory</td>
+</tr>
+<tr>
+<td><strong>Mem0, Zep</strong></td>
+<td>Managed memory</td>
+<td>Purpose-built for agent memory, higher-level APIs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="context-window-management-critical-for-long-sessions">Context Window Management (critical for long sessions)</h2>
+<p>As conversation grows, you must decide what stays in context:</p>
+<ol>
+<li><strong>Pin</strong>: Goal, constraints, schema (immutable)</li>
+<li><strong>Recent buffer</strong>: Last N turns (recency bias)</li>
+<li><strong>Retrieved</strong>: Top-k relevant from long-term memory</li>
+<li><strong>Summarized</strong>: Older turns compressed to bullets</li>
+</ol>
+<p><strong>Senior signal:</strong> Define explicit eviction policy, not ad-hoc truncation.</p>
+<h2 id="memory-update-strategies">Memory Update Strategies</h2>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Append-only</strong></td>
+<td>Every turn goes to memory</td>
+</tr>
+<tr>
+<td><strong>Summarization</strong></td>
+<td>Compress old turns before storing</td>
+</tr>
+<tr>
+<td><strong>Entity extraction</strong></td>
+<td>Pull facts/entities, store structured</td>
+</tr>
+<tr>
+<td><strong>Reflection</strong></td>
+<td>Agent decides what's worth remembering</td>
+</tr>
+<tr>
+<td><strong>Forgetting</strong></td>
+<td>TTL, LRU, or explicit user delete</td>
+</tr>
+</tbody>
+</table>
+<h2 id="retrieval-strategy">Retrieval Strategy.</h2>
+<p><strong>Naive:</strong> Embed query, return top-k from vector DB.</p>
+<p><strong>Production-grade:</strong>
+- Hybrid search (vector + keyword)
+- Metadata filtering (time, user, domain)
+- Re-ranking with cross-encoder
+- Fusion (combine multiple retrievers)
+- Query rewriting (expand/clarify before retrieval)
+- Temporal decay (recent memory weighs higher)</p>
+<p><strong>Key tradeoff:</strong> Retrieval latency vs. relevance. P95 latency target drives architecture.</p>
 
 
 

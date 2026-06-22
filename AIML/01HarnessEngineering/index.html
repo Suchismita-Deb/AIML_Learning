@@ -1,0 +1,1421 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Fundamentals/">
+      
+      
+        <link rel="next" href="../02AI_Agent_Memory/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Harness Engineering - AIML_Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#harness-engineering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AIML_Learning" class="md-header__button md-logo" aria-label="AIML_Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AIML_Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Harness Engineering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Fundamentals/" class="md-tabs__link">
+          
+  
+  
+  AI/ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AI_Interview/InterviewQuestion/" class="md-tabs__link">
+          
+  
+  
+  Interview Questions
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AIML_Learning" class="md-nav__button md-logo" aria-label="AIML_Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AIML_Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI/ML
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI/ML
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harness Engineering
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harness Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-evolution-prompt-context-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Evolution: Prompt → Context → Harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Prompt Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-context-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Context Engineering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Context Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-context-collapse-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Context Collapse Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-harness-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Harness Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-context-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchical Context Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-agent-orchestration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-Agent Orchestration Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swarm-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Swarm Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpointing-and-resumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpointing and Resumption
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harness-vs-context-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harness vs Context Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failure-modes-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failure Modes to Know
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-tools-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Tools &amp; Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mental-model-for-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mental Model for Interviews
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02AI_Agent_Memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memory Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interview Questions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interview Questions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI_Interview/InterviewQuestion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-evolution-prompt-context-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Evolution: Prompt → Context → Harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Prompt Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-context-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Context Engineering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Context Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-context-collapse-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Context Collapse Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-harness-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Harness Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-context-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchical Context Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-agent-orchestration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-Agent Orchestration Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swarm-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Swarm Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpointing-and-resumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpointing and Resumption
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harness-vs-context-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harness vs Context Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failure-modes-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failure Modes to Know
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-tools-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Tools &amp; Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mental-model-for-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mental Model for Interviews
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Fundamentals/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    AI/ML
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="harness-engineering">Harness Engineering</h1>
+<h2 id="the-evolution-prompt-context-harness">The Evolution: Prompt → Context → Harness</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Prompt Engineering  →  Context Engineering  →  Harness Engineering
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    (2022–2023)            (2023–2024)               (2024–present)
+</span></code></pre></div>
+<p>Each layer was born because the previous one hit a hard ceiling at scale.</p>
+<hr />
+<h2 id="1-prompt-engineering">1. Prompt Engineering</h2>
+<p>When ChatGPT launched, the context window was <strong>~4,096 tokens</strong>. The entire discipline was about compression — how do you fit everything the model needs into ~3,000 words?</p>
+<p>Key techniques: few-shot examples, chain-of-thought, role prompting, instruction tuning.</p>
+<p><strong>The ceiling it hit:</strong> Every call is stateless. No tools, no memory, no external knowledge. Works for isolated Q&amp;A but breaks completely for multi-step, real-world tasks.</p>
+<hr />
+<h2 id="2-context-engineering">2. Context Engineering</h2>
+<p>As windows grew (8K → 32K → 128K → 1M tokens), the problem shifted from <em>fitting</em> data to <em>managing what goes in</em> dynamically.</p>
+<p><strong>Context Engineering</strong> dynamically constructs the context window at runtime using three mechanisms:</p>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tool Calling</strong></td>
+<td>LLM invokes functions (search, read file, run code) to pull only what it needs</td>
+</tr>
+<tr>
+<td><strong>RAG</strong></td>
+<td>Vector database retrieval injects relevant documents on demand</td>
+</tr>
+<tr>
+<td><strong>MCP (Model Context Protocol)</strong></td>
+<td>Vendor-level protocol that plugs external services directly into the model</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tools in practice:</strong> Cursor, Windsurf, Cline, Aider — all IDE agents built on tool calling. LangChain and LlamaIndex for RAG pipelines.</p>
+<h3 id="the-context-collapse-problem">The Context Collapse Problem</h3>
+<p>This is the failure mode Context Engineering cannot fix on its own.</p>
+<p>When a complex, long-running task fills the context window, the model is forced to <strong>summarize its own history</strong> to reclaim space. This causes:</p>
+<ul>
+<li><strong>Over-summarization</strong> — fine-grained details are compressed away</li>
+<li><strong>Illusion of completion</strong> — the model believes it finished subtasks it actually truncated</li>
+<li><strong>Goal drift</strong> — later steps lose fidelity to the original intent</li>
+</ul>
+<p>At FAANG scale, this is the equivalent of a distributed worker that silently corrupts its own job queue under memory pressure — catastrophic and hard to detect.</p>
+<hr />
+<h2 id="3-harness-engineering">3. Harness Engineering</h2>
+<p><strong>Harness Engineering</strong> is the design of the <em>environment, orchestration rules, and state management</em> that allow agents to complete long-horizon tasks reliably — beyond what any single context window can hold.</p>
+<p>You are not engineering the prompt. You are engineering the <strong>system the agent runs inside</strong>.</p>
+<hr />
+<h2 id="core-concepts">Core Concepts</h2>
+<h3 id="agent-loops">Agent Loops</h3>
+<p>An agent loop is a repeating execution cycle:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Task → [Think → Act → Observe] × N → Checkpoint / Exit
+</span></code></pre></div>
+<p>Each iteration: the agent reasons, calls a tool or produces output, observes the result, updates state, then decides whether to continue or terminate.</p>
+<p><strong>Critical property:</strong> The loop must be <strong>restartable from any checkpoint</strong>. This is the same guarantee you require from any distributed worker — idempotency and at-least-once delivery semantics. An agent loop that cannot resume is a prototype, not a production system.</p>
+<hr />
+<h3 id="hierarchical-context-management">Hierarchical Context Management</h3>
+<p>Instead of one agent accumulating an ever-growing context, tasks are decomposed into a <strong>tree of sub-tasks</strong>, each executed by a sub-agent with a fresh, scoped context window.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Orchestrator  (high-level plan, minimal context)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── Sub-Agent A  →  &quot;Research topic X&quot;      [fresh 8K context]
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── Sub-Agent B  →  &quot;Write section Y&quot;       [fresh 8K context]
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>└── Sub-Agent C  →  &quot;Validate output Z&quot;     [fresh 8K context]
+</span></code></pre></div>
+<p>Each sub-agent only sees what it needs. Failures are isolated. Sub-agents can run in parallel.</p>
+<p><strong>The systems analogy is exact:</strong> This is MapReduce. Decompose → distribute → aggregate. The orchestrator is the job scheduler, sub-agents are workers, and the context window is each worker's RAM budget.</p>
+<hr />
+<h3 id="sub-agent-orchestration-patterns">Sub-Agent Orchestration Patterns</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>How it works</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sequential</strong></td>
+<td>Task B starts after Task A completes</td>
+<td>B depends on A's output</td>
+</tr>
+<tr>
+<td><strong>Parallel</strong></td>
+<td>Tasks run simultaneously</td>
+<td>Tasks are independent</td>
+</tr>
+<tr>
+<td><strong>Conditional</strong></td>
+<td>Next task chosen based on prior result</td>
+<td>Branching workflows</td>
+</tr>
+<tr>
+<td><strong>Hierarchical</strong></td>
+<td>Sub-agents spawn their own sub-agents</td>
+<td>Deep, recursive tasks</td>
+</tr>
+</tbody>
+</table>
+<p><strong>FAANG example:</strong> A production coding agent orchestrates a planner → code writer → test writer → reviewer → integrator — each as a separate agent call with scoped context, running sequentially where dependent and in parallel where independent.</p>
+<hr />
+<h3 id="swarm-architecture">Swarm Architecture</h3>
+<p>A <strong>swarm</strong> runs agents with minimal central coordination. Each agent follows local rules and self-selects tasks, producing emergent collective behavior without a single orchestrator.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Hierarchical</th>
+<th>Swarm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Control</strong></td>
+<td>Centralized orchestrator</td>
+<td>Decentralized, peer-to-peer</td>
+</tr>
+<tr>
+<td><strong>Failure mode</strong></td>
+<td>Orchestrator is a single point of failure</td>
+<td>Degrades gracefully</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Well-defined, structured workflows</td>
+<td>Exploratory, open-ended tasks</td>
+</tr>
+</tbody>
+</table>
+<p>Frameworks: AutoGen (Microsoft), CrewAI, OpenAI Swarm.</p>
+<hr />
+<h3 id="checkpointing-and-resumption">Checkpointing and Resumption</h3>
+<p>Long-running agent tasks — measured in minutes or hours — will encounter API failures, rate limits, context overflow, and states requiring human review. Without checkpointing, a failure at step 47 of 50 means starting over.</p>
+<p><strong>Checkpointing</strong> persists the agent's state — completed steps, intermediate outputs, current task position — so execution resumes from the last known good state.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Step 1 ✅ [checkpoint]  →  Step 2 ✅ [checkpoint]  →  Step 3 ❌
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                                                          ↓
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>                                              Resume from Step 2
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>                                                          ↓
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>                                              Step 3 (retry) ✅
+</span></code></pre></div>
+<p><strong>Implementation patterns:</strong>
+- Persist checkpoints to a durable store (Redis, DynamoDB, S3)
+- Use <strong>event sourcing</strong> — every action is an immutable append-only log entry
+- All steps must be <strong>idempotent</strong> — re-executing a completed step produces the same result, no side effects</p>
+<p>This is write-ahead logging for agents. Any senior engineer who has designed fault-tolerant distributed systems will recognize it immediately — and that recognition is exactly the signal FAANG interviewers look for.</p>
+<hr />
+<h2 id="harness-vs-context-engineering">Harness vs Context Engineering</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Context Engineering</th>
+<th>Harness Engineering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unit of work</strong></td>
+<td>Single LLM call</td>
+<td>Multi-step agent loop</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>One context window</td>
+<td>Distributed across agents</td>
+</tr>
+<tr>
+<td><strong>Failure handling</strong></td>
+<td>Prompt retry</td>
+<td>Checkpoint + resume</td>
+</tr>
+<tr>
+<td><strong>Scale</strong></td>
+<td>One model, one task</td>
+<td>Many agents, parallel execution</td>
+</tr>
+<tr>
+<td><strong>Key engineering skill</strong></td>
+<td>Retrieval + prompt design</td>
+<td>Systems design + orchestration</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="failure-modes-to-know">Failure Modes to Know</h2>
+<table>
+<thead>
+<tr>
+<th>Failure Mode</th>
+<th>What happens</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Context drift</strong></td>
+<td>Agent loses alignment with original goal over many iterations</td>
+<td>Re-inject the goal statement at each checkpoint</td>
+</tr>
+<tr>
+<td><strong>Runaway loops</strong></td>
+<td>Agent loops infinitely on a stuck tool call</td>
+<td>Hard iteration cap + loop detection heuristic</td>
+</tr>
+<tr>
+<td><strong>Over-summarization</strong></td>
+<td>Compression destroys critical detail</td>
+<td>Structured summaries with pinned immutable key facts</td>
+</tr>
+<tr>
+<td><strong>Sub-agent hallucination</strong></td>
+<td>Sub-agent returns confident, wrong output</td>
+<td>Validator agent + confidence threshold gating</td>
+</tr>
+<tr>
+<td><strong>Cascading failure</strong></td>
+<td>One sub-agent failure corrupts downstream agents</td>
+<td>Isolation boundaries + explicit fallback paths</td>
+</tr>
+<tr>
+<td><strong>Prompt injection</strong></td>
+<td>Malicious content in retrieved data hijacks agent behavior</td>
+<td>Input sanitization + sandboxed tool execution</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="key-tools-frameworks">Key Tools &amp; Frameworks</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Category</th>
+<th>What it gives you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LangGraph</strong></td>
+<td>Orchestration</td>
+<td>Stateful, graph-based agent workflows with built-in checkpointing</td>
+</tr>
+<tr>
+<td><strong>AutoGen</strong></td>
+<td>Multi-agent</td>
+<td>Conversational multi-agent coordination</td>
+</tr>
+<tr>
+<td><strong>CrewAI</strong></td>
+<td>Role-based agents</td>
+<td>Agents with defined roles, goals, and tool access</td>
+</tr>
+<tr>
+<td><strong>Temporal</strong></td>
+<td>Durable workflows</td>
+<td>Production-grade fault-tolerant workflow orchestration (not AI-specific, highly applicable)</td>
+</tr>
+<tr>
+<td><strong>OpenAI Assistants API</strong></td>
+<td>Managed agents</td>
+<td>Thread + run model with native state persistence</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mental-model-for-interviews">Mental Model for Interviews</h2>
+<blockquote>
+<p><em>"Harness Engineering applies the same principles distributed systems use to coordinate unreliable workers — decomposition, isolation, idempotency, checkpointing, and fault tolerance — to the problem of running LLM agents on complex, long-horizon tasks."</em></p>
+</blockquote>
+<p>Map every harness concept to a systems concept you already know:</p>
+<table>
+<thead>
+<tr>
+<th>Agent concept</th>
+<th>Systems equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent loop</td>
+<td>Worker process / consumer loop</td>
+</tr>
+<tr>
+<td>Context window</td>
+<td>Working memory / RAM budget</td>
+</tr>
+<tr>
+<td>Checkpoint</td>
+<td>Write-ahead log / commit point</td>
+</tr>
+<tr>
+<td>Sub-agent</td>
+<td>Microservice / worker shard</td>
+</tr>
+<tr>
+<td>Orchestrator</td>
+<td>Workflow engine (Airflow, Temporal)</td>
+</tr>
+<tr>
+<td>Swarm</td>
+<td>Peer-to-peer distributed system</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
