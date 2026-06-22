@@ -2,11 +2,22 @@ site_name: AIML_Learning
 
 nav:
   - Home: index.md
-  - System Design:
-      - Fundamentals: SystemDesign/Fundamentals.md
+  - AI/ML:
+      - Fundamentals: AIML/Fundamentals.md
+      - Harness Engineering: AIML/01HarnessEngineering.md
+      - Memory Management: AIML/02AI_Agent_Memory.md
+  - Interview Questions:
+      - Fundamentals: AI_Interview/InterviewQuestion.md
 
 markdown_extensions:
   - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - tables
 theme:
   name: material
   palette:

@@ -61,3 +61,53 @@ Table when the first column contains text and act as heading.
   --md-primary-fg-color: #d15dde;
   --md-accent-fg-color: #d15dde;
 }
+
+
+/* Quizlet-style card blocks for markdown quiz pages */
+.quiz-box {
+    border: 1px solid #d7e2d7;
+    border-left: 5px solid #9534DFFF;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 14px 0;
+    background: #f8fcf8;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-box strong {
+    font-size: 1rem;
+    color: #16331a;
+}
+
+.quiz-toggle {
+    margin-top: 10px;
+    border-top: 1px dashed #cfd8cf;
+    padding-top: 10px;
+}
+
+.quiz-toggle summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #8929CDFF;
+}
+
+.quiz-toggle[open] summary {
+    margin-bottom: 8px;
+}
+
+/* Wrap long code lines — globally and inside quiz cards */
+pre code,
+.quiz-box pre code,
+.md-typeset pre code,
+.highlight code {
+    white-space: pre-wrap !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    overflow-x: unset !important;
+}
+
+pre,
+.md-typeset pre {
+    white-space: pre-wrap !important;
+    overflow-x: unset !important;
+}
