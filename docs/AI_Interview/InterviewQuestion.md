@@ -25,6 +25,7 @@
 <strong>RAG vs a longer context window — which wins, and when?</strong>
 <details class="quiz-toggle">
 <summary>Reveal Answer</summary>
+
 </details>
 </div>
 
@@ -32,6 +33,21 @@
 <strong>What are the failure modes of a basic RAG system?</strong>
 <details class="quiz-toggle">
 <summary>Reveal Answer</summary>
+A basic RAG system typically fails in predictable but critical ways: poor retrieval quality, stale or misaligned indexes, bad chunking strategies, embedding mismatches, and timing/coordination issues between retrieval and generation.   
+There might be technical root causes and operational issue - like silent drift, observability gaps, and scaling fragility.
+
+Core Failure modes - 
+
+Retrieval Quality/Poor embedding quality - If the retriever fails to fetch relevant documents, the LLM will generate poor answers. Always domain tune embeddings and validate with representative queries..
+
+Stale or Misaligned Indexes/Irrelevant Retrieval - If the vector database is not updated with the latest documents, it may return outdated information. Implement regular re-indexing and monitor for data freshness.
+
+Bad chunking - Retrieval returns the right docs but wrong slice missing definition, exceptions. Chunk by semantics boundaries not raw token count.
+
+Retrieval Timing 
+
+https://dev.to/kuldeep_paul/ten-failure-modes-of-rag-nobody-talks-about-and-how-to-detect-them-systematically-7i4?utm_source=copilot.com
+
 </details>
 </div>
 
@@ -72,7 +88,6 @@ Embedding models - Identify the embedding models we are going to use different m
 Consider the quesry expectation - short specific question or more complex?
 </details>
 </div>
-
 <div class="quiz-box">
 <strong>How do you pick the right chunk size for different use cases?</strong>
 <details class="quiz-toggle">
@@ -88,6 +103,9 @@ Evaluate the performance - for evaluating metrics like relevance accuracy and re
 <strong>What are the chunking strategies, and when should you use them?</strong>
 <details class="quiz-toggle">
 <summary>Reveal Answer</summary>
+
+RAG pipeline.  
+
 Fixed Size chunking - It's the most straightforward approach and each chunk equals a token.
 We decide how many tokens each chunk should contain and then split the text accordingly. We can add overlaps to pros of the context of the content. This method is simple to implement and works well when the content is relatively uniform in structure. However, it may split sentences or paragraphs in unnatural places, which can lead to loss of context and meaning.
 

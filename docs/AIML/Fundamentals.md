@@ -85,7 +85,7 @@ print(response)
 
 ### Code to show the use of API key and OpenAi client to send prompt and os to read the API key from the env variable.
 
-```jupyter
+```python
 import os
 from openai import OpenAI
 // OpenAI is the company that created Chatgpt and build the AI models. The Openai Python library is the gateway to this AI models.
@@ -320,9 +320,272 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-**Vector Db** - In company say there is 
+**Vector Db** - In company say there is 500gb of document and there are document like employee handbook, support tickets, timeoff guidelines. The time off guidelines is same like the vacation policy and employee will search say vacation policy and the model will not find it because the words are different. 
 
-25:254
+In typical db the search will be based on keyword like `Select * from document where content like '%vacation policy%'` and the user has to make specific search and keywork to get the data but in vector db the search will be based on meaning.
 
-LLM to ask question about the tech internal documents we need the ability to pass data to the LLM. This is done by RAG (Retrieval Augmented Generation) which is a technique that combines the power of LLMs with external knowledge sources to improve the quality and relevance of generated responses. RAG allows LLMs to access and retrieve information from external sources, such as databases, documents, or APIs, to provide more accurate and contextually relevant answers.
+The vector db will convert the meaning into numbers and find the relevant document based on what someone needs and not words. It stores the embeddings.
+
+Example - Implementation of vector db in pinecone and chromadb. LLM will search with the meaning and not words. It will find the relevant document based on what someone needs and not words. It stores the embeddings. Embedding model converts the words into vectors.
+Embedding imp feature is **Dimensionality**  Words does not have same meaning it has different meaning in different context, tone, formality. The dimension used is 1536 dimensions. 
+
+The important aspect of VectorDb is **Retrieval** data to get the data there are **Scoring** and **Chunk Overlap**.   
+Scoring is the threshold like how similar the data has to be to consider it relevant. The question like - "My company allow vacation to London?" and "Can I take my laptop to London?" are two different questions. The scoring will help to get the relevant answer.
+
+In SQL we store the data in row wise and in vector db its in chunk form and the meaning gets chunk and there will be overlap.
+
+Example building semantic search engine.
+
+Company search portal has 10k search with 60% failure rate. User searching "reset password" and getting response "password recovery process" - keywork does not match. Build a search engine that understand meaning and not keyword.
+
+Thinks needed -    
+
+sentence-transformers – Embedding models from HuggingFace.  
+langchain – Abstraction framework.  
+langchain-community – Vector store integrations.  
+langchain-huggingface – HuggingFace embeddings integration.  
+chromadb – Production vector database.  
+numpy – Vector mathematics.
+
+Using the Embeddings.py file. The steps include.
+Initialize the embedding model and the encode query and documents. Calculate the similarity.
+
+```python
+import os
+from sentence_transformers import SentenceTransformer, util
+
+def main():
+    # Step 1: Initialize model
+    model = SentenceTransformer("all-MiniLM-L6-v2")
+
+    # Step 2: Define query and docs
+    query = "forgot my password"
+    docs = [
+        "Password recovery: Use the 'Reset Password' link on login page",
+        "Vacation policy: Request time off 2 weeks in advance",
+        "Account security: Enable two-factor authentication",
+        "Login help: Contact IT if you cannot access your account"
+    ]
+
+    # Step 3: Convert query and docs to embeddings
+    query_emb = model.encode(query)
+    doc_embs = model.encode(docs)
+
+    # Step 4: Find semantic matches
+    scores = util.cos_sim(query_emb, doc_embs)[0]
+
+    print(f"Query: '{query}'\n")
+    print("Results (score > 0.3 = relevant):")
+    for doc, score in zip(docs, scores):
+        marker = "✅" if score > 0.3 else " "
+        print(f"{marker} [{score:.2f}] {doc}")
+
+    print("\n▼ Notice: Found 'Password recovery' and 'Login help'")
+    print("  Even though query didn't contain those exact words!")
+
+    # Step 5: Mark task complete
+    os.makedirs("/root/markers", exist_ok=True)
+    open("/root/markers/task1_embeddings_complete.txt", "w").write("DONE")
+
+if __name__ == "__main__":
+    main()
+    
+```
+Smart document chunking - Chunk size - 500 character and overlap - 100 characters (20%)
+
+LangChain's RecursiveCharacterTextSplitter handles it properly.
+
+To execute import RecursiveCharacterTextSplitter and set the chunk_size to 500 and chunk_overlap to 100.
+
+
+```python
+
+def task2_chunking():
+    print("\n■ Task 2: Smart Document Chunking")
+    print("=" * 55)
+
+    # Sample company documentation
+    long_document = """
+    TechDocs Employee Handbook
+
+    Chapter 1: Remote Work Policy
+
+    Our company embraces flexible work arrangements to support work-life balance.
+    Employees are permitted to work remotely up to 3 days per week, provided they
+    maintain productivity and communication standards.
+
+    Remote work does not change performance expectations. Managers will evaluate
+    employees based on deliverables, quality of work, and contribution to team
+    rather than hours logged. Regular 1-on-1 meetings should continue virtually.
+    """
+
+    print(f"📄 Original Document Length: {len(long_document)} characters")
+    print("-" * 40)
+
+    # Configure the text splitter
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=500,
+        chunk_overlap=100,
+        length_function=len,
+        separators=["\n\n", "\n", ".", " ", ""]
+    )
+
+    # Split the document
+    chunks = splitter.split_text(long_document)
+
+    print(f" Chunk size: ~500 characters")
+    print(f" Overlap: 100 characters\n")
+    for i, chunk in enumerate(chunks[:3], 1):
+        print(f" Chunk {i} ({len(chunk)} chars):")
+        print(chunk[:200], "...\n")  # preview first 200 chars
+
+    # Mark task complete
+    os.makedirs("/root/markers", exist_ok=True)
+    open("/root/markers/task2_chunking_complete.txt", "w").write("DONE")
+
+
+if __name__ == "__main__":
+    task1_embeddings()
+    task2_chunking()
+```
+The next step is **Vector Store**.
+
+Vector stores are specialized designed database to store embeddings, find similar vectors, sclae to million of documents and attach metadata for filtering.
+
+> Document - Embedding - Store in Db.  
+> Query - Embedding - Find similar vectors in Db.  
+> Return top k result by cosine similarity.
+
+Why chromadb - Local first and no cloud dependency, production-ready, open-source, simple to start with 5 lines of code and metadata filtering like search by tags, categories.
+
+ChromaDb + Embeddings = Document is semantically searchable in ms.
+
+
+
+
+
+
+
+
+
+
+
+Gen AI - There are  mainly 2 type - How the LLM like gpt works internally and another to create agent and all to make software using LLM.
+
+# Generative AI – 7 Week Curriculum
+
+## Week 1 – Foundations of Generative AI
+- Introduction to AI
+- Mathematical Foundations for AI
+- Probability, Statistics, and Linear Algebra
+- Basics of Neural Networks
+- Gradient Descent and Optimization
+- Basics of CNN
+- Architectures: Feedforward, RNN, and CNN
+- Mini Project – Build a Simple Neural Network using TensorFlow
+- Mini Project – Train an Autoencoder on the MNIST Dataset
+
+---
+
+## Week 2 – Generative Models
+- Discriminative and Generative Models
+- Generative Adversarial Networks (GANs)
+- Variational Autoencoders (VAEs)
+- Probabilistic Data Generation using VAEs
+- Four Mini Projects using TensorFlow
+- Metrics Visualization using TensorBoard
+- Mini Project – Implement a GAN to Generate Handwritten Digits
+- Mini Project – Train a VAE to Generate Faces using the CelebA Dataset
+
+---
+
+## Week 3 – Transformers and Large Language Models
+- RNN, LSTM
+- Transformers Architecture
+- Attention Mechanism: Self-Attention and Positional Encoding
+- Major Project – Code Transformer from Scratch
+- Encoder-Decoder Framework
+- Pretraining Objective: MLM, CLM
+- GPT, BERT
+- Mini Project – Sentiment Analysis using BERT
+
+---
+
+## Week 4 – Fine-Tuning LangChain, LangGraph
+- Pretraining and Fine-Tuning
+- LoRA, QLoRA
+- HuggingFace
+- Fine-Tuning for Tasks like Summarization, QA
+- LangChain Installation and Basic Setup
+- Overview of LangChain: Prompts, Memory, Chains, Agents
+- LangGraph: Nodes, State, StateGraph, Workflows
+- AI Agents
+- Mini Project – Simple Q&A Application using LangChain
+
+---
+
+## Week 5 – Vector Databases, RAG
+- Vector Databases
+- RAG
+- Applications of RAG
+- Building RAG Pipelines with LangChain
+- Building RAG using Streamlit
+- Major Project – Build End-to-End Chatbot like ChatGPT using Streamlit, LangChain, ChromaDB, Weaviate
+- RAG Memory with LLMs
+- Project – Build an App using Streamlit for Image Generation, Image Caption Generation, Video Caption Generation
+
+---
+
+## Week 6 – MCP, Fine-Tuning, Deepseek
+- MCP – Model Context Protocol
+- Ontologies
+- Projects – Fine-Tuning using Unsloth
+- Mixture of Experts
+- Chain of Thoughts
+- Deepseek Architecture
+
+---
+
+## Week 7 – Projects, Trending Topics
+- Distillation
+- Vision Transformers
+- Multimodal Models
+- CLIP
+- Prompt Engineering  
+
+
+How LLM works topic like Neural Network will come into the picture.   
+Backpropagation and Gradient Descent.
+
+Python - Numpy and panda.
+Do one project with the lifecycle of the mdoel - taking the data, training the data, testing and evaluating.
+Handwriting data set - tensorflow.
+
+
+Different types of Neural Network - CNN and RNN.
+
+Understand the Transformer Architecture and how it works.
+
+RNN - LSTM - Transformer Architecture.
+
+docs/images/TransformerArchitecture.png
+
+FuneTuning of the LLM - LoRA and QLoRA understand the code to get comfortable.
+
+LLM based application - LangChain and LangGraph Ecosystem. Understand the code to get comfortable.  
+Google ADK - Agent Development Kit alternate of Langchain and langraph.
+
+
+Add the memory and add tools and understand the problem with tools and then MCP.
+
+RAG - ChromaDB use the streamlit ui of the system.
+
+Ollama to run model in the local system. Unsloth for fine tuning.
+
+Gen AI - The Ai that generate the content like text, image is GenAI and the part that generate the text is LLM.
+
+Agentic AI - Like asking GPT to make a mail when gold price is 100. Meaning this is a task. It makes the entire work using the AI Agents. Task Ai agent and entire goal Agentic AI.
+
+
+
 
