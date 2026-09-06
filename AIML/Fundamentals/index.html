@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -823,46 +823,46 @@ The term employee vacation policy and staff time off are different words and the
 </span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="o">//</span> <span class="n">We</span> <span class="n">can</span> <span class="n">increase</span> <span class="n">the</span> <span class="n">performance</span> <span class="n">by</span> <span class="n">adding</span> <span class="n">more</span> <span class="n">tools</span> <span class="n">like</span> <span class="n">custom</span> <span class="n">database</span> <span class="n">access</span> <span class="n">web</span> <span class="n">search</span> <span class="ow">and</span> <span class="n">local</span> <span class="n">file</span> <span class="n">systems</span><span class="o">.</span>
 </span></code></pre></div></p>
 <h3 id="code-to-show-the-use-of-api-key-and-openai-client-to-send-prompt-and-os-to-read-the-api-key-from-the-env-variable">Code to show the use of API key and OpenAi client to send prompt and os to read the API key from the env variable.</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import os
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>from openai import OpenAI
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>// OpenAI is the company that created Chatgpt and build the AI models. The Openai Python library is the gateway to this AI models.
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAI</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="o">//</span> <span class="n">OpenAI</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">company</span> <span class="n">that</span> <span class="n">created</span> <span class="n">Chatgpt</span> <span class="ow">and</span> <span class="n">build</span> <span class="n">the</span> <span class="n">AI</span> <span class="n">models</span><span class="o">.</span> <span class="n">The</span> <span class="n">Openai</span> <span class="n">Python</span> <span class="n">library</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">gateway</span> <span class="n">to</span> <span class="n">this</span> <span class="n">AI</span> <span class="n">models</span><span class="o">.</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>// The OS library is important to access the environment variables starting the key and all other details.
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">//</span> <span class="n">The</span> <span class="n">OS</span> <span class="n">library</span> <span class="ow">is</span> <span class="n">important</span> <span class="n">to</span> <span class="n">access</span> <span class="n">the</span> <span class="n">environment</span> <span class="n">variables</span> <span class="n">starting</span> <span class="n">the</span> <span class="n">key</span> <span class="ow">and</span> <span class="nb">all</span> <span class="n">other</span> <span class="n">details</span><span class="o">.</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a># Load API key from environment variable
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>api_key = os.getenv(&quot;OPENAI_API_KEY&quot;)
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Load API key from environment variable</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">)</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a># Create OpenAI client
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>base_url = os.getenv(&quot;OPENAI_API_BASE&quot;)
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>client = OpenAI(api_key=api_key, base_url=base_url)
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Create OpenAI client</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">base_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OPENAI_API_BASE&quot;</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">)</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a># The base URL tells the client where to send the request if the address to the open AI server. The SDK points to OpenAI public endpoint by default. 
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># The base URL tells the client where to send the request if the address to the open AI server. The SDK points to OpenAI public endpoint by default. </span>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a># Define your prompt
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>prompt = &quot;Write a short poem about sunrise over the ocean.&quot;
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># Define your prompt</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;Write a short poem about sunrise over the ocean.&quot;</span>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a># Send request to Chat Completions endpoint
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>response = client.chat.completions.create(
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    model=&quot;gpt-4o-mini&quot;,   # choose model
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    messages=[
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: prompt}
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    ],
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    temperature=0.7,       # creativity level
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    max_completion_tokens=150  # response length
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>)
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>// client.chat.completions.create is OpenAi&#39;s conversational API. 
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1"># Send request to Chat Completions endpoint</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>   <span class="c1"># choose model</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="p">],</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>       <span class="c1"># creativity level</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    <span class="n">max_completion_tokens</span><span class="o">=</span><span class="mi">150</span>  <span class="c1"># response length</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="p">)</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="o">//</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span> <span class="ow">is</span> <span class="n">OpenAi</span><span class="s1">&#39;s conversational API. </span>
 </span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
 </span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>// There are 3 roles in conversation - `system` - Instructions the way AI should behave - `user` - the question and the `assistant` - The AI&#39;s response.
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="o">//</span> <span class="n">There</span> <span class="n">are</span> <span class="mi">3</span> <span class="n">roles</span> <span class="ow">in</span> <span class="n">conversation</span> <span class="o">-</span> <span class="err">`</span><span class="n">system</span><span class="err">`</span> <span class="o">-</span> <span class="n">Instructions</span> <span class="n">the</span> <span class="n">way</span> <span class="n">AI</span> <span class="n">should</span> <span class="n">behave</span> <span class="o">-</span> <span class="err">`</span><span class="n">user</span><span class="err">`</span> <span class="o">-</span> <span class="n">the</span> <span class="n">question</span> <span class="ow">and</span> <span class="n">the</span> <span class="err">`</span><span class="n">assistant</span><span class="err">`</span> <span class="o">-</span> <span class="n">The</span> <span class="n">AI</span><span class="s1">&#39;s response.</span>
 </span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a># Print the generated text. choices is an array of the responses.
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>print(response.choices[0].message.content)
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="c1"># Print the generated text. choices is an array of the responses.</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a># Print token usage details. Tokens are the pieces of word that AI use in the process every request. Rough estimate 1 token = 4 character.
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>There are three token types prompt token the question you asked completion token the AI answers and total token is the summation of both.
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>print(&quot;Prompt tokens:&quot;, response.usage.prompt_tokens)
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>print(&quot;Completion tokens:&quot;, response.usage.completion_tokens)
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>print(&quot;Total tokens:&quot;, response.usage.total_tokens)
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="c1"># Print token usage details. Tokens are the pieces of word that AI use in the process every request. Rough estimate 1 token = 4 character.</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="n">There</span> <span class="n">are</span> <span class="n">three</span> <span class="n">token</span> <span class="n">types</span> <span class="n">prompt</span> <span class="n">token</span> <span class="n">the</span> <span class="n">question</span> <span class="n">you</span> <span class="n">asked</span> <span class="n">completion</span> <span class="n">token</span> <span class="n">the</span> <span class="n">AI</span> <span class="n">answers</span> <span class="ow">and</span> <span class="n">total</span> <span class="n">token</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">summation</span> <span class="n">of</span> <span class="n">both</span><span class="o">.</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prompt tokens:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">usage</span><span class="o">.</span><span class="n">prompt_tokens</span><span class="p">)</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Completion tokens:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">usage</span><span class="o">.</span><span class="n">completion_tokens</span><span class="p">)</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total tokens:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">usage</span><span class="o">.</span><span class="n">total_tokens</span><span class="p">)</span>
 </span></code></pre></div>
 <p>It will complete the text or generate the idea or describe. The response is non-deterministic and there ways to manage the amount of randomness.</p>
 <p>Temperature is used to create the amount of randomness.</p>
@@ -1040,9 +1040,223 @@ Prompt tuning is a method of fine-tuning prompts for specific tasks.</p>
 </span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 </span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>    <span class="n">main</span><span class="p">()</span>
 </span></code></pre></div>
-<strong>Vector Db</strong> - In company say there is </p>
-<p>25:254</p>
-<p>LLM to ask question about the tech internal documents we need the ability to pass data to the LLM. This is done by RAG (Retrieval Augmented Generation) which is a technique that combines the power of LLMs with external knowledge sources to improve the quality and relevance of generated responses. RAG allows LLMs to access and retrieve information from external sources, such as databases, documents, or APIs, to provide more accurate and contextually relevant answers.</p>
+<strong>Vector Db</strong> - In company say there is 500gb of document and there are document like employee handbook, support tickets, timeoff guidelines. The time off guidelines is same like the vacation policy and employee will search say vacation policy and the model will not find it because the words are different. </p>
+<p>In typical db the search will be based on keyword like <code>Select * from document where content like '%vacation policy%'</code> and the user has to make specific search and keywork to get the data but in vector db the search will be based on meaning.</p>
+<p>The vector db will convert the meaning into numbers and find the relevant document based on what someone needs and not words. It stores the embeddings.</p>
+<p>Example - Implementation of vector db in pinecone and chromadb. LLM will search with the meaning and not words. It will find the relevant document based on what someone needs and not words. It stores the embeddings. Embedding model converts the words into vectors.
+Embedding imp feature is <strong>Dimensionality</strong>  Words does not have same meaning it has different meaning in different context, tone, formality. The dimension used is 1536 dimensions. </p>
+<p>The important aspect of VectorDb is <strong>Retrieval</strong> data to get the data there are <strong>Scoring</strong> and <strong>Chunk Overlap</strong>. <br />
+Scoring is the threshold like how similar the data has to be to consider it relevant. The question like - "My company allow vacation to London?" and "Can I take my laptop to London?" are two different questions. The scoring will help to get the relevant answer.</p>
+<p>In SQL we store the data in row wise and in vector db its in chunk form and the meaning gets chunk and there will be overlap.</p>
+<p>Example building semantic search engine.</p>
+<p>Company search portal has 10k search with 60% failure rate. User searching "reset password" and getting response "password recovery process" - keywork does not match. Build a search engine that understand meaning and not keyword.</p>
+<p>Thinks needed -    </p>
+<p>sentence-transformers – Embedding models from HuggingFace.<br />
+langchain – Abstraction framework.<br />
+langchain-community – Vector store integrations.<br />
+langchain-huggingface – HuggingFace embeddings integration.<br />
+chromadb – Production vector database.<br />
+numpy – Vector mathematics.</p>
+<p>Using the Embeddings.py file. The steps include.
+Initialize the embedding model and the encode query and documents. Calculate the similarity.</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sentence_transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">SentenceTransformer</span><span class="p">,</span> <span class="n">util</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="c1"># Step 1: Initialize model</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">model</span> <span class="o">=</span> <span class="n">SentenceTransformer</span><span class="p">(</span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="c1"># Step 2: Define query and docs</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;forgot my password&quot;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">docs</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        <span class="s2">&quot;Password recovery: Use the &#39;Reset Password&#39; link on login page&quot;</span><span class="p">,</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="s2">&quot;Vacation policy: Request time off 2 weeks in advance&quot;</span><span class="p">,</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="s2">&quot;Account security: Enable two-factor authentication&quot;</span><span class="p">,</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        <span class="s2">&quot;Login help: Contact IT if you cannot access your account&quot;</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="p">]</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="c1"># Step 3: Convert query and docs to embeddings</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    <span class="n">query_emb</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="n">doc_embs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    <span class="c1"># Step 4: Find semantic matches</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    <span class="n">scores</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">cos_sim</span><span class="p">(</span><span class="n">query_emb</span><span class="p">,</span> <span class="n">doc_embs</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query: &#39;</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&#39;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Results (score &gt; 0.3 = relevant):&quot;</span><span class="p">)</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>    <span class="k">for</span> <span class="n">doc</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">docs</span><span class="p">,</span> <span class="n">scores</span><span class="p">):</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>        <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;✅&quot;</span> <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mf">0.3</span> <span class="k">else</span> <span class="s2">&quot; &quot;</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">marker</span><span class="si">}</span><span class="s2"> [</span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">doc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">▼ Notice: Found &#39;Password recovery&#39; and &#39;Login help&#39;&quot;</span><span class="p">)</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Even though query didn&#39;t contain those exact words!&quot;</span><span class="p">)</span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>    <span class="c1"># Step 5: Mark task complete</span>
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;/root/markers&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>    <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/root/markers/task1_embeddings_complete.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;DONE&quot;</span><span class="p">)</span>
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>    <span class="n">main</span><span class="p">()</span>
+</span></code></pre></div>
+Smart document chunking - Chunk size - 500 character and overlap - 100 characters (20%)</p>
+<p>LangChain's RecursiveCharacterTextSplitter handles it properly.</p>
+<p>To execute import RecursiveCharacterTextSplitter and set the chunk_size to 500 and chunk_overlap to 100.</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">task2_chunking</span><span class="p">():</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">■ Task 2: Smart Document Chunking&quot;</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">55</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="c1"># Sample company documentation</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="n">long_document</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="s2">    TechDocs Employee Handbook</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="s2">    Chapter 1: Remote Work Policy</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="s2">    Our company embraces flexible work arrangements to support work-life balance.</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="s2">    Employees are permitted to work remotely up to 3 days per week, provided they</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="s2">    maintain productivity and communication standards.</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="s2">    Remote work does not change performance expectations. Managers will evaluate</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="s2">    employees based on deliverables, quality of work, and contribution to team</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="s2">    rather than hours logged. Regular 1-on-1 meetings should continue virtually.</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="s2">    &quot;&quot;&quot;</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📄 Original Document Length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">long_document</span><span class="p">)</span><span class="si">}</span><span class="s2"> characters&quot;</span><span class="p">)</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    <span class="c1"># Configure the text splitter</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="n">splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>        <span class="n">chunk_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>        <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>        <span class="n">length_function</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>        <span class="n">separators</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>    <span class="p">)</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>    <span class="c1"># Split the document</span>
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>    <span class="n">chunks</span> <span class="o">=</span> <span class="n">splitter</span><span class="o">.</span><span class="n">split_text</span><span class="p">(</span><span class="n">long_document</span><span class="p">)</span>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Chunk size: ~500 characters&quot;</span><span class="p">)</span>
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Overlap: 100 characters</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chunks</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Chunk </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span><span class="si">}</span><span class="s2"> chars):&quot;</span><span class="p">)</span>
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">chunk</span><span class="p">[:</span><span class="mi">200</span><span class="p">],</span> <span class="s2">&quot;...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># preview first 200 chars</span>
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>    <span class="c1"># Mark task complete</span>
+</span><span id="__span-6-41"><a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;/root/markers&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-6-42"><a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>    <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/root/markers/task2_chunking_complete.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;DONE&quot;</span><span class="p">)</span>
+</span><span id="__span-6-43"><a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>
+</span><span id="__span-6-44"><a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>
+</span><span id="__span-6-45"><a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span id="__span-6-46"><a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>    <span class="n">task1_embeddings</span><span class="p">()</span>
+</span><span id="__span-6-47"><a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a>    <span class="n">task2_chunking</span><span class="p">()</span>
+</span></code></pre></div>
+The next step is <strong>Vector Store</strong>.</p>
+<p>Vector stores are specialized designed database to store embeddings, find similar vectors, sclae to million of documents and attach metadata for filtering.</p>
+<blockquote>
+<p>Document - Embedding - Store in Db.<br />
+Query - Embedding - Find similar vectors in Db.<br />
+Return top k result by cosine similarity.</p>
+</blockquote>
+<p>Why chromadb - Local first and no cloud dependency, production-ready, open-source, simple to start with 5 lines of code and metadata filtering like search by tags, categories.</p>
+<p>ChromaDb + Embeddings = Document is semantically searchable in ms.</p>
+<p>Gen AI - There are  mainly 2 type - How the LLM like gpt works internally and another to create agent and all to make software using LLM.</p>
+<h1 id="generative-ai-7-week-curriculum">Generative AI – 7 Week Curriculum</h1>
+<h2 id="week-1-foundations-of-generative-ai">Week 1 – Foundations of Generative AI</h2>
+<ul>
+<li>Introduction to AI</li>
+<li>Mathematical Foundations for AI</li>
+<li>Probability, Statistics, and Linear Algebra</li>
+<li>Basics of Neural Networks</li>
+<li>Gradient Descent and Optimization</li>
+<li>Basics of CNN</li>
+<li>Architectures: Feedforward, RNN, and CNN</li>
+<li>Mini Project – Build a Simple Neural Network using TensorFlow</li>
+<li>Mini Project – Train an Autoencoder on the MNIST Dataset</li>
+</ul>
+<hr />
+<h2 id="week-2-generative-models">Week 2 – Generative Models</h2>
+<ul>
+<li>Discriminative and Generative Models</li>
+<li>Generative Adversarial Networks (GANs)</li>
+<li>Variational Autoencoders (VAEs)</li>
+<li>Probabilistic Data Generation using VAEs</li>
+<li>Four Mini Projects using TensorFlow</li>
+<li>Metrics Visualization using TensorBoard</li>
+<li>Mini Project – Implement a GAN to Generate Handwritten Digits</li>
+<li>Mini Project – Train a VAE to Generate Faces using the CelebA Dataset</li>
+</ul>
+<hr />
+<h2 id="week-3-transformers-and-large-language-models">Week 3 – Transformers and Large Language Models</h2>
+<ul>
+<li>RNN, LSTM</li>
+<li>Transformers Architecture</li>
+<li>Attention Mechanism: Self-Attention and Positional Encoding</li>
+<li>Major Project – Code Transformer from Scratch</li>
+<li>Encoder-Decoder Framework</li>
+<li>Pretraining Objective: MLM, CLM</li>
+<li>GPT, BERT</li>
+<li>Mini Project – Sentiment Analysis using BERT</li>
+</ul>
+<hr />
+<h2 id="week-4-fine-tuning-langchain-langgraph">Week 4 – Fine-Tuning LangChain, LangGraph</h2>
+<ul>
+<li>Pretraining and Fine-Tuning</li>
+<li>LoRA, QLoRA</li>
+<li>HuggingFace</li>
+<li>Fine-Tuning for Tasks like Summarization, QA</li>
+<li>LangChain Installation and Basic Setup</li>
+<li>Overview of LangChain: Prompts, Memory, Chains, Agents</li>
+<li>LangGraph: Nodes, State, StateGraph, Workflows</li>
+<li>AI Agents</li>
+<li>Mini Project – Simple Q&amp;A Application using LangChain</li>
+</ul>
+<hr />
+<h2 id="week-5-vector-databases-rag">Week 5 – Vector Databases, RAG</h2>
+<ul>
+<li>Vector Databases</li>
+<li>RAG</li>
+<li>Applications of RAG</li>
+<li>Building RAG Pipelines with LangChain</li>
+<li>Building RAG using Streamlit</li>
+<li>Major Project – Build End-to-End Chatbot like ChatGPT using Streamlit, LangChain, ChromaDB, Weaviate</li>
+<li>RAG Memory with LLMs</li>
+<li>Project – Build an App using Streamlit for Image Generation, Image Caption Generation, Video Caption Generation</li>
+</ul>
+<hr />
+<h2 id="week-6-mcp-fine-tuning-deepseek">Week 6 – MCP, Fine-Tuning, Deepseek</h2>
+<ul>
+<li>MCP – Model Context Protocol</li>
+<li>Ontologies</li>
+<li>Projects – Fine-Tuning using Unsloth</li>
+<li>Mixture of Experts</li>
+<li>Chain of Thoughts</li>
+<li>Deepseek Architecture</li>
+</ul>
+<hr />
+<h2 id="week-7-projects-trending-topics">Week 7 – Projects, Trending Topics</h2>
+<ul>
+<li>Distillation</li>
+<li>Vision Transformers</li>
+<li>Multimodal Models</li>
+<li>CLIP</li>
+<li>Prompt Engineering  </li>
+</ul>
+<p>How LLM works topic like Neural Network will come into the picture. <br />
+Backpropagation and Gradient Descent.</p>
+<p>Python - Numpy and panda.
+Do one project with the lifecycle of the mdoel - taking the data, training the data, testing and evaluating.
+Handwriting data set - tensorflow.</p>
+<p>Different types of Neural Network - CNN and RNN.</p>
+<p>Understand the Transformer Architecture and how it works.</p>
+<p>RNN - LSTM - Transformer Architecture.</p>
+<p>docs/images/TransformerArchitecture.png</p>
+<p>FuneTuning of the LLM - LoRA and QLoRA understand the code to get comfortable.</p>
+<p>LLM based application - LangChain and LangGraph Ecosystem. Understand the code to get comfortable.<br />
+Google ADK - Agent Development Kit alternate of Langchain and langraph.</p>
+<p>Add the memory and add tools and understand the problem with tools and then MCP.</p>
+<p>RAG - ChromaDB use the streamlit ui of the system.</p>
+<p>Ollama to run model in the local system. Unsloth for fine tuning.</p>
+<p>Gen AI - The Ai that generate the content like text, image is GenAI and the part that generate the text is LLM.</p>
+<p>Agentic AI - Like asking GPT to make a mail when gold price is 100. Meaning this is a task. It makes the entire work using the AI Agents. Task Ai agent and entire goal Agentic AI.</p>
 
 
 
@@ -1095,7 +1309,7 @@ Prompt tuning is a method of fine-tuning prompts for specific tasks.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
