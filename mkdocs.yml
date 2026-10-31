@@ -3,11 +3,14 @@ site_name: AIML_Learning
 nav:
   - Home: index.md
   - AI/ML:
-      - Fundamentals: AIML/Fundamentals.md
-      - Harness Engineering: AIML/01HarnessEngineering.md
+      - RoadMap: AIML/01RoadMap.md
+      - Fundamentals: AIML/01Fundamentals.md
       - Memory Management: AIML/02AI_Agent_Memory.md
+      - Harness Engineering: AIML/03HarnessEngineering.md
+
   - Interview Questions:
       - Fundamentals: AI_Interview/InterviewQuestion.md
+      - Interview Part 1: AI_Interview/Interview1.md
 
 markdown_extensions:
   - md_in_html
